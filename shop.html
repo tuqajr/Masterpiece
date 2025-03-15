@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tatreez</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orpheus+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orpheus+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Reem+Kufi+Fun:wght@400..700&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<style>
+    
+/* Navbar */
+body {
+    font-family: 'Reem Kufi Fun', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+     display: flex; 
+     flex-direction: column;
+       min-height: 100vh; /* Full height of the viewport */
+       font-family: 'Orpheus Pro', serif;
+
+}
+/* Header Navbar */
+.navbar {
+    background-color: rgb(145, 51, 51);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: white;
+}
+
+.logo-container {
+    display: flex; 
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-container img {
+    height: 40px; 
+}
+
+.logo-container .logo-text {
+    font-family: "Reem Kufi Fun", sans-serif;
+    font-size: 30px; 
+    color: white;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex; 
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #d9534f;
+    text-decoration: underline;
+}
+
+/* Header Icons */
+header .icons {
+    display: flex;
+    gap: 15px; 
+    align-items: center;
+}
+
+header .icons a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+header .icons a:hover {
+    color: #d9534f;
+}
+
+
+
+/* Global Style */
+body {
+    background-color: #f9f9f9;
+    font-family: 'Orpheus Pro', serif;
+    color: #333;
+}
+
+body::before {
+    content: "";
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("./image/back.png") no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    opacity: 0.1;
+    z-index: -1; 
+}
+
+/* Section Styling */
+section {
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+h2, h3 {
+    color: rgb(145, 51, 51);
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+p {
+    color: #555;
+    line-height: 1.8;
+    font-size: 14px; /* Adjusted font size for readability */
+    margin-bottom: 15px;
+}
+/* Products Section */
+.products {
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between products */
+    justify-content: center;
+}
+
+.product {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1 1 calc(33% - 20px); /* Responsive grid */
+    max-width: 300px;
+}
+
+.product:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.product img {
+    max-width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.product h4 {
+    color: rgb(145, 51, 51);
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.product p {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+.price {
+    color: #d9534f;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+/* Buttons */
+.btn-container {
+    display: flex;
+    justify-content:center;
+    margin-top: 10px;
+}
+
+.add-to-cart {
+    background-color: rgb(145, 51, 51);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-to-cart:hover {
+    background-color: #d9534f;
+    transform: scale(1.05);
+}
+
+/* Price Styling */
+.price {
+    color: #d9534f;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+
+/* Learn Section */
+.learn {
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.learn .price{
+    color: #d9534f;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.learn-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.learn-item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1 1 calc(33% - 20px);
+    max-width: 300px;
+}
+
+.learn-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.learn-item img {
+    max-width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.learn-item h4 {
+    color: rgb(145, 51, 51);
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.learn-item p {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+.learn-btn {
+    background-color: rgb(145, 51, 51);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.learn-btn:hover {
+    background-color: #d9534f;
+    transform: scale(1.05);
+}
+
+
+/* Footer */
+footer {
+    background-color: rgb(145, 51, 51);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    color: white;
+}
+
+.cart-icon {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.cart-icon:hover {
+    color: #d9534f;
+}
+.cart-icon #cart-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #d9534f;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 1px 1px;
+    display: inline-block;
+    min-width: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+  
+</style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="icons">
+                <a href="add-to-cart.html" class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cart-count">0</span></a>
+                <a href="#"><i class="fas fa-user"></i></a>
+                <a href="#"><i class="fas fa-search"></i></a>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="learn.html">learn</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="logo-container">
+                <span class="logo-text">غرزه</span>
+                <img src="./image/embroidery_1230695.png" alt="Logo">
+            </div>
+        </div>  
+    </header>
+    
+    <main>
+       <!-- Products Section -->
+<section class="products">
+    <h2>Products</h2>
+    <div class="product-grid">
+        <!-- Product 1 -->
+        <div class="product">
+            <img src="./image/product-1.png" alt="Olive Branch Wall Art">
+            <h4>Olive Branch Wall Art</h4>
+            <p>Traditional wall art hanging</p>
+            <p class="price">$120.00</p>
+            <button 
+                class="add-to-cart" 
+                data-name="Olive Branch Wall Art" 
+                data-price="$120.00" 
+                data-image="./image/product-1.png">
+                Add to Cart
+            </button>
+        </div>
+        
+        <!-- Product 2 -->
+        <div class="product">
+            <img src="./image/product-2.jpeg" alt="Floral Cushion Cover">
+            <h4>Floral Cushion Cover</h4>
+            <p>Traditional craft embroidery</p>
+            <p class="price">$75.00</p>
+            <button 
+                class="add-to-cart" 
+                data-name="Floral Cushion Cover" 
+                data-price="$75.00" 
+                data-image="./image/product-2.jpeg">
+                Add to Cart
+            </button>
+        </div>
+        <!-- Product 3 -->
+        <div class="product">
+            <img src="./image/product-3.jpeg" alt="Geometric Table Runner">
+            <h4>Geometric Table Runner</h4>
+            <p>Modern Palestinian design</p>
+            <p class="price">$95.00</p>
+            <button 
+            class="add-to-cart" 
+            data-name="Geometric Table Runner" 
+            data-price="$95.00" 
+            data-image="./image/product-3.jpeg">
+            Add to Cart
+        </button>
+        </div>
+        <div class="product">
+            <img src="./image/hoo.jpeg" alt="New Product">
+            <h4>Embroidered Hoodie</h4>
+            <p>Beautifully designed Hoodie to wear</p>
+            <p class="price">$50.00</p>
+            <button class="add-to-cart" 
+                    data-name="Embroidered Hoodie" 
+                    data-price="50.00" 
+                    data-image="./image/hoo.jpeg">
+                Add to Cart
+            </button>
+        </div>
+        <div class="product">
+            <img src="./image/bag.jpeg" alt="New Product">
+            <h4>Elegant Handcrafted Bag</h4>
+            <p>Beautifully designed Bag </p>
+            <p class="price">$55.00</p>
+            <button class="add-to-cart" 
+                    data-name="Elegant Handcrafted Bag" 
+                    data-price="55.00" 
+                    data-image="./image/bag.jpeg">
+                Add to Cart
+            </button>
+        </div>
+        <div class="product">
+            <img src="./image/cup.jpeg" alt="New Product">
+            <h4> Handcrafted bottle</h4>
+            <p>Beautifully designed bottle</p>
+            <p class="price">$40.00</p>
+            <button class="add-to-cart" 
+                    data-name="Handcrafted bottle" 
+                    data-price="40.00" 
+                    data-image="./image/cup.jpeg">
+                Add to Cart
+            </button>
+        </div>
+    </div>
+</section>
+
+        <!-- Learn Section -->
+        <section class="learn">
+            <h2>Learn Tatreez</h2>
+            <div class="learn-grid">
+                <!-- Workshop 1 -->
+                <div class="learn-item">
+                    <img src="./image/learn-1-p.jpeg" alt="Basic Stitches">
+                    <h4>Basic Stitches Workshop</h4>
+                    <p>Learn foundational stitches to start your journey.</p>
+                    <p class="price">$45.00</p>
+                    <div class="btn-container">
+                        <button class="add-to-cart" 
+                                data-name="Basic Stitches Workshop" 
+                                data-price="45.00" 
+                                data-image="./image/learn-1-p.jpeg">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <!-- Workshop 2 -->
+                <div class="learn-item">
+                    <img src="./image/learn-2.jpeg" alt="Pattern Creation">
+                    <h4>Pattern Creation Workshop</h4>
+                    <p>Master the art of creating your own patterns.</p>
+                    <p class="price">$55.00</p>
+                    <div class="btn-container">
+                        <button class="add-to-cart" 
+                                data-name="Pattern Creation Workshop" 
+                                data-price="55.00" 
+                                data-image="./image/learn-2.jpeg">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                <!-- Workshop 3 -->
+                <div class="learn-item">
+                    <img src="./image/learn-3.jpeg" alt="Design Transfer">
+                    <h4>Design Transfer Workshop</h4>
+                    <p>Learn how to transfer designs to fabric seamlessly.</p>
+                    <p class="price">$45.00</p>
+                    <div class="btn-container">
+                        <button class="add-to-cart" 
+                                data-name="Design Transfer Workshop" 
+                                data-price="45.00" 
+                                data-image="./image/learn-3.jpeg">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        
+    </main>
+    <footer>
+        <div class="footer-container">
+          <div class="footer-links">
+        
+            <div class="links-column">
+              <h4>Contact</h4>
+              <ul>
+                <li><a href="mailto:info@tatreez.com">info@tatreez.com</a></li>
+                <li><a href="tel:+123456789">+123 456 789</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <p class="footer-copy">&copy; 2025 Tatreez Traditions. All rights reserved.</p>
+      </footer>
+      
+<script>
+   // الحصول على السلة من localStorage أو تهيئتها
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+// إضافة المنتج إلى السلة
+function addToCart(product) {
+    cart.push(product); // إضافة المنتج إلى المصفوفة
+    localStorage.setItem("cart", JSON.stringify(cart)); // حفظ السلة في localStorage
+    updateCartCount();
+}
+
+// تحديث عداد السلة
+function updateCartCount() {
+    const cartCount = document.getElementById("cart-count");
+    cartCount.textContent = cart.length; // عدد المنتجات في السلة
+}
+
+// الربط مع زر إضافة إلى السلة
+document.querySelectorAll(".add-to-cart").forEach(button => {
+    button.addEventListener("click", () => {
+        const product = {
+            name: button.getAttribute("data-name"),
+            price: button.getAttribute("data-price"),
+            image: button.getAttribute("data-image")
+        };
+        addToCart(product);
+        alert(`${product.name} added to your cart!`);
+    });
+});
+
+// تحديث عداد السلة عند تحميل الصفحة
+document.addEventListener("DOMContentLoaded", updateCartCount);
+
+// فتح صفحة التفاصيل
+function openDetails(url) {
+    window.location.href = url; // الانتقال إلى صفحة التفاصيل
+}
+
+
+</script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

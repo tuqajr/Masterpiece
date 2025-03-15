@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - Tatreez</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orpheus+Pro&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alkalami&family=Badeen+Display&family=Handjet:wght@100..900&family=Reem+Kufi+Fun:wght@400..700&family=Reem+Kufi:wght@400..700&family=Ruwudu:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<style>
+    /* General Body Styling */
+body {
+    font-family: 'Reem Kufi Fun', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+     display: flex; 
+     flex-direction: column;
+       min-height: 100vh; /* Full height of the viewport */
+       font-family: 'Orpheus Pro', serif;
+
+}
+
+/* Header Navbar */
+.navbar {
+    background-color: rgb(145, 51, 51);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: white;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #d9534f;
+}
+
+.icons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.cart-icon {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.cart-icon:hover {
+    color: #d9534f;
+}
+.cart-icon #cart-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #d9534f;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 1px 1px;
+    display: inline-block;
+    min-width: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(145, 51, 51);
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* Cart Items Section */
+#cart-items {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.cart-item {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+.cart-item img {
+    width: 100px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.cart-item h4 {
+    color: rgb(145, 51, 51);
+    font-size: 18px;
+}
+
+.cart-item p {
+    color: #555;
+    font-size: 14px;
+}
+
+.cart-item button {
+    background-color: rgb(145, 51, 51);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.cart-item button:hover {
+    background-color: #d9534f;
+}
+
+/* Footer */
+footer {
+    background-color: rgb(145, 51, 51);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin-top: auto; 
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #d9534f;
+}
+
+
+</style>
+</head>
+<body>
+    <header>
+        <!-- Navbar (reuse your navbar structure here) -->
+        <div class="navbar">
+            <div class="icons">
+                <a href="add-to-cart.html" class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cart-count">0</span>
+                </a>
+                 <a href="#"><i class="fas fa-user"></i></a>
+                <a href="#"><i class="fas fa-search"></i></a>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="learn.html">Learn</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="logo-container">
+                <span class="logo-text">غرزه</span>
+                <img src="./image/embroidery_1230695.png" alt="Logo">
+            </div>
+        </div>  
+    </header>
+    <main>
+        <h1>Your Cart</h1>
+        <div id="cart-items">
+            <!-- ستتم تعبئة المنتجات هنا ديناميكيًا -->
+            <p>Your cart is empty.</p>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Tatreez Traditions. All rights reserved.</p>
+    </footer>
+
+    <script>
+       // استرداد السلة من localStorage
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+// عرض المنتجات في السلة
+function displayCartItems() {
+    const cartItemsContainer = document.getElementById("cart-items");
+    if (cart.length === 0) {
+        cartItemsContainer.innerHTML = `<p>Your cart is empty.</p>`;
+        return;
+    }
+
+    cartItemsContainer.innerHTML = ""; // تفريغ المحتوى قبل العرض
+    cart.forEach((item, index) => {
+        cartItemsContainer.innerHTML += `
+            <div class="cart-item">
+                <img src="${item.image}" alt="${item.name}" />
+                <div>
+                    <h4>${item.name}</h4>
+                    <p>Price: $${item.price}</p>
+                    <button onclick="removeFromCart(${index})">Remove</button>
+                </div>
+            </div>
+        `;
+    });
+}
+
+// تحديث عداد السلة
+function updateCartCount() {
+    const cartCount = document.getElementById("cart-count");
+    cartCount.textContent = cart.length; // عدد المنتجات في السلة
+}
+
+
+// تحديث عداد السلة عند تحميل الصفحة
+document.addEventListener("DOMContentLoaded", updateCartCount);
+
+
+// إزالة منتج من السلة
+function removeFromCart(index) {
+    cart.splice(index, 1); // حذف العنصر من المصفوفة
+    localStorage.setItem("cart", JSON.stringify(cart)); // تحديث السلة في localStorage
+    displayCartItems(); // إعادة العرض
+}
+
+// عرض المنتجات عند تحميل الصفحة
+document.addEventListener("DOMContentLoaded", displayCartItems);
+
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

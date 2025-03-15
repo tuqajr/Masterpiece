@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tatreez</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orpheus+Pro&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alkalami&family=Badeen+Display&family=Handjet:wght@100..900&family=Reem+Kufi+Fun:wght@400..700&family=Reem+Kufi:wght@400..700&family=Ruwudu:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="icons">
+                <a href="add-to-cart.html" class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cart-count">0</span>
+                </a>
+                 <a href="#"><i class="fas fa-user"></i></a>
+                <a href="#"><i class="fas fa-search"></i></a>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="learn.html">learn</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="logo-container">
+                <span class="logo-text">غرزه</span>
+                <img src="./image/embroidery_1230695.png" alt="Logo">
+            </div>
+        </div>  
+    </header>
+    
+    <main>
+        <section class="banner">
+            <div class="background"></div>
+            <div class="content">
+                <h2>Palestinian Embroidery Heritage</h2>
+                <p>Preserving traditional Palestinian Tatreez through contemporary.</p>
+
+                <button class="learn-more" onclick="location.href='about.html';">Learn More About Us</button>
+             </div>
+        </section>
+        <section class="about-us">
+            <h3>Our Mission</h3>
+            <div class="about-us-row">
+                <div class="about-us-item">
+                    <img src="./image/icon.png" alt="Empowerment Icon" class="about-us-icon">
+                    <p>Empower individuals to reconnect with their roots through Tatreez.</p>
+                </div>
+                <div class="about-us-item">
+                    <img src="./image/icon.png" alt="Learning Icon" class="about-us-icon">
+                    <p>Provide accessible learning opportunities for Palestinians in the diaspora.</p>
+                </div>
+                <div class="about-us-item">
+                    <img src="./image/icon.png" alt="Inspiration Icon" class="about-us-icon">
+                    <p>Inspire students to become educators, passing on Tatreez to future generations.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-products">
+            <h3>Featured Products</h3>
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <div class="product">
+                    <img src="./image/product-1.png" alt="Olive Branch Wall Art">
+                    <h4>Olive Branch Wall Art</h4>
+                    <p>Traditional wall art hanging</p>
+                    <p class="price">$120.00</p>
+                    <button 
+                        class="add-to-cart" 
+                        data-name="Olive Branch Wall Art" 
+                        data-price="$120.00" 
+                        data-image="./image/product-1.png">
+                        Add to Cart
+                    </button>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product">
+                    <img src="./image/product-2.jpeg" alt="Floral Cushion Cover">
+                    <h4>Floral Cushion Cover</h4>
+                    <p>Traditional craft embroidery</p>
+                    <p class="price">$75.00</p>
+                    <button 
+                        class="add-to-cart" 
+                        data-name="Floral Cushion Cover" 
+                        data-price="$75.00" 
+                        data-image="./image/product-2.jpeg">
+                        Add to Cart
+                    </button>
+                </div>
+                <!-- Product 3 -->
+                <div class="product">
+                    <img src="./image/product-3.jpeg" alt="Geometric Table Runner">
+                    <h4>Geometric Table Runner</h4>
+                    <p>Modern Palestinian design</p>
+                    <p class="price">$95.00</p>
+                    <button 
+                    class="add-to-cart" 
+                    data-name="Geometric Table Runner" 
+                    data-price="$95.00" 
+                    data-image="./image/product-3.jpeg">
+                    Add to Cart
+                </button>
+                </div>
+        </section>
+        
+        <section class="learn">
+            <h2>Learn Tatreez</h2>
+            <div class="learn-grid">
+                <!-- Workshop 1 -->
+                <div class="learn-item">
+                    <img src="./image/learn-1-p.jpeg" alt="Basic Stitches">
+                    <h4>Design Transfer Workshop</h4>
+                    <p>Learn foundational stitches to start your journey.</p>
+                    <p class="price">$45.00</p>
+                    <div class="btn-container">
+                        <button class="add-to-cart" 
+                                data-name="Basic Stitches Workshop" 
+                                data-price="45.00" 
+                                data-image="./image/learn-1-p.jpeg">
+                            Add to Cart
+                        </button>
+                        
+                    </div>
+                </div>
+                <!-- Workshop 2 -->
+                <div class="learn-item">
+                    <img src="./image/learn-2.jpeg" alt="Pattern Creation">
+                    <h4>Pattern Creation Workshop</h4>
+                    <p>Master the art of creating your own patterns.</p>
+                    <p class="price">$55.00</p>
+                    <div class="btn-container">
+                        <button class="add-to-cart" 
+                                data-name="Pattern Creation Workshop" 
+                                data-price="55.00" 
+                                data-image="./image/learn-2.jpeg">
+                            Add to Cart
+                        </button>
+                       
+                    </div>
+                </div>
+                <!-- Workshop 3 -->
+                <div class="learn-item">
+                    <img src="./image/learn-3.jpeg" alt="Design Transfer">
+                    <h4>Design Transfer Workshop</h4>
+                    <p>Learn how to transfer designs to fabric.</p>
+                    <p class="price">$65.00</p>
+                    <div class="btn-container">
+                        <button class="add-to-cart" 
+                                data-name="Design Transfer Workshop" 
+                                data-price="65.00" 
+                                data-image="./image/learn-3.jpeg">
+                            Add to Cart
+                        </button>
+                       
+                    </div>
+                </div>
+            </div>
+        </section>
+            
+    </main>
+
+    <footer>
+        <div class="footer-container">
+          <div class="footer-links">
+            <div class="links-column">
+              <h4>Contact</h4>
+              <ul>
+                <li><a href="mailto:info@tatreez.com">info@tatreez.com</a></li>
+                <li><a href="tel:+123456789">+123 456 789</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <p class="footer-copy">&copy; 2025 Tatreez Traditions. All rights reserved.</p>
+      </footer>
+      
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orpheus+Pro&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alkalami&family=Badeen+Display&family=Handjet:wght@100..900&family=Reem+Kufi+Fun:wght@400..700&family=Reem+Kufi:wght@400..700&family=Ruwudu:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+
+body {
+  position: relative; 
+  font-family: 'Orpheus Pro', serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #f8f8f8;
+  color: black;
+}
+body::before {
+  content: "";
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("./image/back.png") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  opacity: 0.1;
+  z-index: -1; 
+}
+/* Navbar */
+.navbar {
+    background-color: rgb(145, 51, 51);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-container {
+    display: flex; 
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-container img {
+    height: 40px; 
+}
+
+.logo-container .logo-text {
+    font-family: "Reem Kufi Fun", sans-serif;
+    font-size: 30px; 
+    color: white;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex; 
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #d9534f;
+    text-decoration: underline;
+}
+
+/* navend */
+.welcom-header-1 p {
+  text-align: center;
+  color:rgb(145, 51, 51);
+  padding: 20px;
+  position: relative;
+  z-index: 2; 
+  font-size:x-large;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.about-us {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.about-us h3 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: rgb(145, 51, 51);
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.about-us-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.about-us-item {
+  text-align: center;
+  flex: 1 1 calc(33.33% - 20px);
+  max-width: 300px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.about-us-icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+  object-fit: contain;
+}
+
+.about-us-item h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: rgb(145, 51, 51);
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.about-us-item p {
+  font-size: 17px;
+  line-height: 1.6;
+  color: black;
+}
+.founder-info {
+    margin-top: 20px;  
+    text-align: center;
+    padding: 10px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.founder-text {
+    font-size: 20px;          
+    max-width: 800px;       
+    margin: 0 auto;          
+    line-height: 1.6;         
+    color: black;             
+    font-style: italic;  
+    font-size: larger;     
+}
+.inspiration-section {
+  background-color: rgb(145, 51, 51);
+  padding: 20px 10px;
+  text-align: center;
+  color: #fff;
+  margin-top: 20px; 
+}
+
+.inspiration-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.inspiration-heading {
+  font-size: 19px;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  color: white;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+  text-transform:none;
+}
+.inspiration-text {
+  font-size: 18px;
+  margin-bottom: 5px;
+  line-height: 1.6;
+}
+
+.inspiration-cta {
+  margin-top: 20px;
+}
+
+.inspiration-question {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.contact-button {
+  background-color: #fff;
+  color: rgb(145, 51, 51);
+  padding: 10px 10px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: #d9534f;
+  color: #fff;
+}
+
+
+footer {
+  background-color: rgb(145, 51, 51);
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+}
+
+footer p{
+    color: white;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: rgb(145, 51, 51);
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="icons">
+                <a href="#"><i class="fas fa-user"></i></a>
+                <a href="#"><i class="fas fa-search"></i></a>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="learn.html">learn</a></li>
+                <li><a href="contact.html">Contact</a></li>
+
+            </ul>
+            <div class="logo-container">
+                <span class="logo-text">غرزه</span>
+                <img src="./image/embroidery_1230695.png" alt="Logo">
+            </div>
+        </div>  
+    </header>
+    <header class="welcom-header-1">
+        <p>Welcome to Tatreez Traditions, a platform dedicated to preserving Palestinian embroidery and culture.</p>
+      </header>
+      
+      <section class="about-us">
+        <h3>About Us</h3>
+        <div class="about-us-row">
+          <div class="about-us-item">
+            <img src="./image/icon.png" alt="Mission Icon" class="about-us-icon">
+            <h2>Our Mission</h2>
+            <p>We aim to empower individuals through Tatreez, reconnecting them with their roots.</p>
+          </div>
+          <div class="about-us-item">
+            <img src="./image/icon.png" alt="Vision Icon" class="about-us-icon">
+            <h2>Our Vision</h2>
+            <p>Our vision is to ensure Palestinian heritage thrives for generations to come.</p>
+          </div>
+          <div class="about-us-item">
+            <img src="./image/icon.png" alt="Values Icon" class="about-us-icon">
+            <h2>Our Values</h2>
+            <p>We value authenticity, creativity, and cultural empowerment in all our efforts.</p>
+          </div>
+        </div>
+      </section>
+      
+      <section class="founder-info">
+        <p class="founder-text">
+            <h2>Founded in</h2>
+          Founded in 2025, Tatreez Traditions stands as a beacon for preserving the rich heritage of Palestinian embroidery.<br>
+          Our passion and dedication drive us to keep the tradition alive while embracing modernity.
+        </p>
+      </section>
+      <section class="inspiration-section">
+        <div class="inspiration-content">
+          <h2 class="inspiration-heading">INSPIRED BY YOU</h2>
+          <p class="inspiration-text">
+            You, our vibrant community of makers, learners, and culture keepers, inspire everything we do.
+          </p>
+          <div class="inspiration-cta">
+            <p class="inspiration-question">
+              Is there a learning guide you'd like to see? Let us know!
+            </p>
+            <a href="contact.html" class="contact-button">Contact Us</a>
+          </div>
+        </div>
+      </section>
+
+    <footer>
+        <p>&copy; 2025 Tatreez Traditions. All rights reserved.</p>
+    </footer>
+</body>
+</html>
